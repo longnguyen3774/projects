@@ -1,4 +1,4 @@
-mapboxgl.accessToken = "MAPBOX-TOKEN";
+// mapboxgl.accessToken = "MAPBOX-TOKEN";
 
 let globalData = [];
 const countrySelect = document.getElementById("countrySelect");
