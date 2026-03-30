@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Store Dashboard</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="container">
+    <header>
+        <h3>🌍 Dashboard Dự Báo Doanh Số Toàn Cầu</h3>
+    </header>
+
+    <div class="controls">
+        <div class="control-group">
+            <label>Quốc gia:</label>
+            <select id="countrySelect"><option value="">Đang tải...</option></select>
+        </div>
+        <div class="control-group">
+            <label>Thành phố:</label>
+            <select id="citySelect"><option value="">Chọn quốc gia trước</option></select>
+        </div>
+        <div class="control-group">
+            <label>Ngày:</label>
+            <input type="date" id="dateSelect" />
+        </div>
+    </div>
+
+    <div class="map-wrapper">
+        <div id="map"></div>
+        <div id="barContainer" class="bar-container hidden">
+            <div class="bar-header">
+                <button class="close-btn" onclick="closeChart()">×</button>
+                <h4 id="barTitle"></h4>
+                <div class="legend">
+                    <span class="sold">■</span> Thực tế
+                    <span class="forecast">■</span> Dự báo
+                </div>
+            </div>
+
+            <div class="bar-body">
+                <div id="barChart"></div>
+            </div>
+
+            <div class="bar-footer">
+                <div class="xlabel">Số lượng sản phẩm</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
