@@ -1,4 +1,4 @@
-mapboxgl.accessToken = "pk.eyJ1IjoiZHJhd2luZW5peCIsImEiOiJjbWhxMnN2bWMwcXh4MmlwZ3U1NW1lajZ4In0.W4PXC4PjsbhOz3YTCDtD1w"; //
+mapboxgl.accessToken = "MAPBOX-TOKEN";
 
 let globalData = [];
 const countrySelect = document.getElementById("countrySelect");
